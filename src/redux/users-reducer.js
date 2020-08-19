@@ -3,11 +3,7 @@ const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 
 let initialState = {
-	users: [
-		{ id: 1, photoUrl: 'https://media-exp1.licdn.com/dms/image/C5103AQHOMdetORMMgg/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=7iQ2zGYbL7HRdttX6r4k3n2NI5ofl8k6uuOfOfC-VGg', followed: false, fullName: 'Mikhail', status: 'I am a BOSS', location: {city: 'Khabarovsk', country: 'Russia'} },
-		{ id: 2, photoUrl: 'https://media-exp1.licdn.com/dms/image/C5103AQHOMdetORMMgg/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=7iQ2zGYbL7HRdttX6r4k3n2NI5ofl8k6uuOfOfC-VGg', followed: true, fullName: 'Dmitry', status: 'I am a BOSS too', location: {city: 'New York', country: 'USA'} },
-		{ id: 3, photoUrl: 'https://media-exp1.licdn.com/dms/image/C5103AQHOMdetORMMgg/profile-displayphoto-shrink_200_200/0?e=1598486400&v=beta&t=7iQ2zGYbL7HRdttX6r4k3n2NI5ofl8k6uuOfOfC-VGg', followed: false, fullName: 'Nikolay', status: 'No no no no no I am a BOSS!', location: {city: 'Chernobyl', country: 'Belarus'} },
-	]
+	users: [  ]
 }
 
 const usersReducer = (state = initialState, action) => {
