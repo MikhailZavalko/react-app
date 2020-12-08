@@ -7,9 +7,9 @@ import { login } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router-dom';
 import style from './../common/FormsControls/FormsControls.module.css';
 
-const LoginForm = (props) => {
+const LoginForm = ({ handleSubmit, error }) => {
 	return (
-		<form onSubmit={props.handleSubmit}>
+		<form onSubmit={handleSubmit}>
 			<div>
 				<Field placeholder={"Email"} name={"email"} component={Input} validate={[required]} />
 			</div>
@@ -21,9 +21,10 @@ const LoginForm = (props) => {
 			</div>
 
 			{/* { props.error && */}
-			<div className={style.formSummaryError}>
-				{props.error}
+			{ error && <div className={style.formSummaryError}>
+				{error}
 			</div>
+			}
 			{/* } */}
 
 			<div>
@@ -33,7 +34,7 @@ const LoginForm = (props) => {
 	)
 }
 
-const LoginReduxForm = reduxForm({form: 'Login'})(LoginForm)
+const LoginReduxForm = reduxForm({ form: 'Login' })(LoginForm)
 
 const Login = (props) => {
 	const onSubmit = (formData) => {

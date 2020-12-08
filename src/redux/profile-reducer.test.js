@@ -1,6 +1,6 @@
 const { default: profileReducer, addPostActionCreator } = require("./profile-reducer");
 
-it('length of posts should be incremented', () => {
+test('length of posts should be incremented', () => {
 	let action = addPostActionCreator("it-kaamsutra.com");
 	let state = {
 		posts: [
