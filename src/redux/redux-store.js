@@ -6,7 +6,7 @@ import authReducer from "./auth-reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form'
 import appReducer from "./app-reducer";
-const { createStore, combineReducers, applyMiddleware } = require("redux");
+import { createStore, combineReducers, applyMiddleware } from "redux";
 
 let reducers = combineReducers({
 	profilePage: profileReducer,
